@@ -5,8 +5,7 @@
 Small library to help create gesture hooks in a obstacle race game. Will aim to capture jumping, running, ducking and stepping side to side.
 
 ## Authors
-
-###Coding
+### Coding
 
 Sean Brieffies
 
@@ -16,7 +15,7 @@ Darragh Hurley
 
 Arthur Sasunts
 
-##Managing
+### Management
 
 Paul Allan
 
