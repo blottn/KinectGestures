@@ -1,4 +1,4 @@
-#### Kinect Gestures
+# Kinect Gestures
 
 ## About
 
@@ -6,12 +6,18 @@ Small library to help create gesture hooks in a obstacle race game. Will aim to 
 
 ## Authors
 
-#Coding
+###Coding
+
 Sean Brieffies
+
 Seth Banaga
+
 Darragh Hurley
+
 Arthur Sasunts
 
-#Managing
+##Managing
+
 Paul Allan
+
 Nicholas Blott
