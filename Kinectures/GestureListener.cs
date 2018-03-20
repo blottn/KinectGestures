@@ -1,19 +1,10 @@
 ﻿namespace Kinectures
 {
-    public class GestureListener
+    public class GestureListener : IListener
     {
-        static long nextId = 0;
-
-        long id = 0;
 
         public GestureListener()
         {
-            id = nextId++;
-        }
-        
-        public long GetID()
-        {
-            return this.id;
         }
 
         public void OnGesture()
