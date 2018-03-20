@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Kinectures
+﻿namespace Kinectures
 {
-    public class Listener
+    public class GestureListener
     {
         static long nextId = 0;
+
         long id = 0;
-        public Listener()
+
+        public GestureListener()
         {
             id = nextId++;
         }
@@ -17,10 +15,10 @@ namespace Kinectures
         {
             return this.id;
         }
-        
+
         public void Notify()
         {
-            
+
         }
     }
 }
