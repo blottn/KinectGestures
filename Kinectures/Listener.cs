@@ -6,15 +6,16 @@ namespace Kinectures
 {
     public class Listener
     {
-        int ID = 0;
+        static long nextId = 0;
+        long id = 0;
         public Listener()
         {
-
+            id = nextId++;
         }
         
-        public int GetID()
+        public long GetID()
         {
-            return this.ID;
+            return this.id;
         }
         
         public void Notify()
