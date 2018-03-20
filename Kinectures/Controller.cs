@@ -7,20 +7,20 @@ namespace Kinectures
 
     public class Controller
     {
-        private Dictionary<String, Listener> table;
+        private Dictionary<String, GestureListener> table;
         private Sensor sensor;
         public Controller()
         {
-            this.table = new Dictionary<String, Listener>();
+            this.table = new Dictionary<String, GestureListener>();
             this.sensor = new Sensor();
         }
 
-        public void AddListener(String gesture, Listener listener)
+        public void AddListener(String gesture, GestureListener listener)
         {
             this.table.Add(gesture, listener);
         }
 
-        public void RemoveListener(String gesture, Listener listener)
+        public void RemoveListener(String gesture, GestureListener listener)
         {
             this.table.Remove(gesture);
         }

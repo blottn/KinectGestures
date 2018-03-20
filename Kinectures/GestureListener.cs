@@ -16,7 +16,7 @@
             return this.id;
         }
 
-        public void Notify()
+        public void OnGesture()
         {
 
         }

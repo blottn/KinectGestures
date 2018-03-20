@@ -14,6 +14,7 @@ namespace Kinectures
         {
             this.listeners = new List<Listener>();
             this.kinectSensor = KinectSensor.GetDefault();
+            // init kinect polling
         }
 
         // adds a Listener to the List
