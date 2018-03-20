@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Kinectures
 {
-    class Listener
+    public class Listener
     {
         int ID = 0;
-        public Listener ()
+        public Listener()
         {
 
         }
@@ -15,6 +15,11 @@ namespace Kinectures
         public int getID()
         {
             return this.ID;
+        }
+        
+        public void Notify()
+        {
+            
         }
     }
 }

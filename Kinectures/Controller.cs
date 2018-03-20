@@ -1,39 +1,36 @@
 ﻿using System;
 using Microsoft.Kinect;
-using System.Collections.Generic.IDictionary;
+using System.Collections.Generic;
 
-public class Controller
+namespace Kinectures
 {
-    public Controller()
-    {
-        Dictionary<Gesture, Listener> hashTable = new Dictionary<Gesture, Listener>();
-    }
 
-    public void addListener(Gesture g,Listener l)
+    public class Controller
     {
-        this.hashTable.Add(g,l);
-    }
-
-    public void removeListener(Listener l)
-    {
-        this.hashTable.Remove(l);
-    }
-    private void notifyListeners(Gesture g)
-    {
-        Listener val;
-        if (hashTable.TryGetValue(g, out val))
+        private Dictionary<String, Listener> table;
+        private Sensor sensor;
+        public Controller()
         {
-            //code to notify listener
+            this.table = new Dictionary<String, Listener>();
+            this.sensor = new Sensor();
         }
-    }
 
-    public void initilizeSensor()
-    {
-        Sensor s = new Sensor();
-    }
-    public static void Main()
-    {
-        
+        public void AddListener(String gesture, Listener listener)
+        {
+            this.table.Add(gesture, listener);
+        }
 
+        public void RemoveListener(String gesture, Listener listener)
+        {
+            this.table.Remove(gesture);
+        }
+
+        private void notifyListeners(String gesture)
+        {
+            if (table[gesture] != null)
+            {
+                table[gesture].Notify();
+            }
+        }
     }
 }

@@ -14,6 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Microsoft.Kinect">
       <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Assemblies\Microsoft.Kinect.dll</HintPath>
     </Reference>
