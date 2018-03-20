@@ -29,7 +29,7 @@ namespace Kinectures
         {
             if (table[gesture] != null)
             {
-                table[gesture].Notify();
+                table[gesture].OnGesture();
             }
         }
     }
