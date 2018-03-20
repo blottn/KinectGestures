@@ -12,7 +12,7 @@ namespace Kinectures
 
         }
         
-        public int getID()
+        public int GetID()
         {
             return this.ID;
         }

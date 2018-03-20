@@ -25,7 +25,7 @@ namespace Kinectures
             this.table.Remove(gesture);
         }
 
-        private void notifyListeners(String gesture)
+        private void NotifyListeners(String gesture)
         {
             if (table[gesture] != null)
             {

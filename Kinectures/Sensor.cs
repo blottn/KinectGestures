@@ -17,17 +17,17 @@ namespace Kinectures
         }
 
         // adds a Listener to the List
-        public void addListener(Listener listener)
+        public void AddListener(Listener listener)
         {
             listeners.Add(listener);
         }
 
         // removes a Listener from the List
-        public void removeListener(Listener listener)
+        public void RemoveListener(Listener listener)
         {
             for (int i = 0; i < listeners.Count; i++)
             {
-                if (listeners[i].getID() == listener.getID())
+                if (listeners[i].GetID() == listener.GetID())
                 {
                     listeners.Remove(listener);
                     return;     // stop if listener has been removed
