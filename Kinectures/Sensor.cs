@@ -7,28 +7,28 @@ namespace Kinectures
 {
     class Sensor
     {
-        public List<Listener> listeners = null;
+        public List<KinectListener> listeners = null;
         public KinectSensor kinectSensor = null;
         
         public Sensor()
         {
-            this.listeners = new List<Listener>();
+            this.listeners = new List<KinectListener>();
             this.kinectSensor = KinectSensor.GetDefault();
             // init kinect polling
         }
 
         // adds a Listener to the List
-        public void AddListener(Listener listener)
+        public void AddListener(KinectListener listener)
         {
             listeners.Add(listener);
         }
 
         // removes a Listener from the List
-        public void RemoveListener(Listener listener)
+        public void RemoveListener(KinectListener listener)
         {
             for (int i = 0; i < listeners.Count; i++)
             {
-                if (listeners[i].GetID() == listener.GetID())
+                if (listeners[i].GetId() == listener.GetId())
                 {
                     listeners.Remove(listener);
                     return;     // stop if listener has been removed

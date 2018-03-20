@@ -11,7 +11,7 @@ public abstract class IListener
         id = nextId++;
 	}
 
-    protected long getId()
+    public long GetId()
     {
         return id;
     }
