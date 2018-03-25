@@ -9,12 +9,20 @@ namespace Kinectures
     {
         public List<KinectListener> listeners = null;
         public KinectSensor kinectSensor = null;
-        
+        public MultiSourceFrameReader multiSourceFrameReader = null;
         public Sensor()
         {
             this.listeners = new List<KinectListener>();
             this.kinectSensor = KinectSensor.GetDefault();
-            // init kinect polling
+            this.kinectSensor.Open();
+            
+            this.multiSourceFrameReader = this.kinectSensor.OpenMultiSourceFrameReader(FrameSourceTypes.Body);
+            this.multiSourceFrameReader.MultiSourceFrameArrived += MultiSourceFrameReader_MultiSourceFrameArrived;
+        }
+
+        private void MultiSourceFrameReader_MultiSourceFrameArrived(object sender, MultiSourceFrameArrivedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         // adds a Listener to the List
@@ -35,11 +43,6 @@ namespace Kinectures
                 }
             }
         }
-
-        /*
-         * TODO:
-         * POLL SENSOR, NOTIFY LISTENERS WHEN A FRAME IS AVAILABLE
-         */
 
     }
 }
