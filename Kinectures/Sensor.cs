@@ -51,5 +51,20 @@ namespace Kinectures
             }
         }
 
+        public void CloseSensor()
+        {
+            if (this.multiSourceFrameReader != null)
+            {
+                this.multiSourceFrameReader.Dispose();
+                this.multiSourceFrameReader = null;
+            }
+
+            if (this.kinectSensor != null)
+            {
+                this.kinectSensor.Close();
+                this.kinectSensor = null;
+            }
+        }
+
     }
 }
