@@ -22,7 +22,13 @@ namespace Kinectures
 
         private void MultiSourceFrameReader_MultiSourceFrameArrived(object sender, MultiSourceFrameArrivedEventArgs e)
         {
-            throw new NotImplementedException();
+            BodyFrameReference reference;
+            reference = e.FrameReference.AcquireFrame().BodyFrameReference;
+            for (int i = 0; i < listeners.Count; i++)
+            {
+                listeners[i].notify(reference);
+
+            }
         }
 
         // adds a Listener to the List
