@@ -26,7 +26,7 @@ namespace Kinectures
             reference = e.FrameReference.AcquireFrame().BodyFrameReference;
             for (int i = 0; i < listeners.Count; i++)
             {
-                listeners[i].notify(reference);
+                listeners[i].Notify(reference);
 
             }
         }
