@@ -20,6 +20,11 @@
   <ItemGroup>
     <Reference Include="Microsoft.Kinect">
       <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SDKs\Kinect\v2.0_1409\Assemblies\Microsoft.Kinect.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Microsoft.Kinect.VisualGestureBuilder">
+      <HintPath>..\..\..\..\Program Files\Microsoft SDKs\Kinect\v2.0_1409\bin\Microsoft.Kinect.VisualGestureBuilder.dll</HintPath>
+      <Private>true</Private>
     </Reference>
   </ItemGroup>
 

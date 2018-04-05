@@ -31,6 +31,7 @@ namespace Kinectures
             }
         }
 
+
         // adds a Listener to the List
         public void AddListener(KinectListener listener)
         {
