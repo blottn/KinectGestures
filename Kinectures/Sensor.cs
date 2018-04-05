@@ -5,6 +5,9 @@ using Microsoft.Kinect;
 
 namespace Kinectures
 {
+    /*
+     * Initializes a Sensor, Frame Reader, Listeners and Event Handler
+     */
     class Sensor
     {
         public List<KinectListener> listeners = null;
@@ -20,6 +23,9 @@ namespace Kinectures
             this.multiSourceFrameReader.MultiSourceFrameArrived += MultiSourceFrameReader_MultiSourceFrameArrived;
         }
 
+        /*
+        * Notifies the listeners when a frame arrives
+        */
         private void MultiSourceFrameReader_MultiSourceFrameArrived(object sender, MultiSourceFrameArrivedEventArgs e)
         {
             BodyFrameReference reference;
@@ -31,26 +37,33 @@ namespace Kinectures
             }
         }
 
-
-        // adds a Listener to the List
+        /*
+        * Adds a Listener to the list
+        */
         public void AddListener(KinectListener listener)
         {
             listeners.Add(listener);
         }
 
-        // removes a Listener from the List
+        /*
+        * Removes a specific listener from the list
+        */
         public void RemoveListener(KinectListener listener)
         {
             for (int i = 0; i < listeners.Count; i++)
             {
+                // stop searching when the listener is removed
                 if (listeners[i].GetId() == listener.GetId())
-                {
+                {                    
                     listeners.Remove(listener);
-                    return;     // stop if listener has been removed
+                    return;
                 }
             }
         }
 
+        /*
+        * Closes the Frame Reader and Sensor
+        */
         public void CloseSensor()
         {
             if (this.multiSourceFrameReader != null)
